@@ -2,14 +2,14 @@ package _01.TowerOfHanoi;
 
 import java.util.Scanner;
 
-public class TowerOfHanoi {
+public class GoogleTowerOfHanoi {
     int count = 0;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        TowerOfHanoi towerOfHanoi = new TowerOfHanoi();
+        GoogleTowerOfHanoi towerOfHanoi = new GoogleTowerOfHanoi();
         towerOfHanoi.moveHanoiTower("1","2","3",n);
         towerOfHanoi.showResult();
     }
@@ -29,7 +29,7 @@ public class TowerOfHanoi {
         }
     }
 
-    private void showResult(){
-        System.out.printf("총 이동 횟수 : %d", count);
+    void showResult(){
+        System.out.printf("총 이동 횟수 : %d\n", count);
     }
 }

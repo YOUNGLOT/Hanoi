@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class UseRecursive {
 
+
     public static void main(String[] args) {
         UseRecursive test = new UseRecursive();
         test.solve();
@@ -14,13 +15,14 @@ public class UseRecursive {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
 
-        int num1 = (int) Math.pow(3, num);
-        String[][] ar = new String[num1][num1];
+        int arrSize = (int) Math.pow(3, num);
+        String[][] ar = new String[arrSize][arrSize];
 
         // resultArray의 모든 Value를 x로 넣기
         ar = replaceAllValue(ar, "x");
 
-        ar = recursiveMethod(ar, num1, num);
+        //재귀함수를 이용한 풀이
+        ar = recursiveMethod(ar, arrSize, num);
 
         //생성된 Array를 출력
         printArray(ar);
@@ -35,18 +37,18 @@ public class UseRecursive {
         return array;
     }
 
-    private String[][] recursiveMethod(String[][] ar, int num, int seq) {
-        if(seq == 0){
-            return eraseLogic(ar,num,seq);
+    private String[][] recursiveMethod(String[][] ar, int arrSize, int seq) {
+        if(seq < 0){
+            return ar;
         }else
-            return recursiveMethod(eraseLogic(ar,num,seq), num, seq - 1);
+            return recursiveMethod(eraseLogic(ar,arrSize,seq), arrSize, seq - 1);
     }
 
-    private String[][] eraseLogic(String[][] ar, int num, int seq) {
+    private String[][] eraseLogic(String[][] ar, int arrSize, int seq) {
         int temp = (int) Math.pow(3, seq);
 
-        for (int i = 0; i < num / temp; i++) {
-            for (int j = 0; j < num / temp; j++) {
+        for (int i = 0; i < arrSize / temp; i++) {
+            for (int j = 0; j < arrSize / temp; j++) {
 
                 if (i % 3 == 1 && j % 3 == 1) {
 

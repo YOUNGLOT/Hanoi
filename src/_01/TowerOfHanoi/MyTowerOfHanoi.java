@@ -2,14 +2,14 @@ package _01.TowerOfHanoi;
 
 import java.util.Scanner;
 
-public class YHTowerOfHanoi {
+public class MyTowerOfHanoi {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int result = recursiveMethod(sc.nextInt());
-        System.out.println("총 이동 횟수 : " + result);
+        MyTowerOfHanoi my = new MyTowerOfHanoi();
+        System.out.println("총 이동 횟수 : " + my.recursiveMethod(sc.nextInt()));
     }
 
-    private static int recursiveMethod(int n) {
+    int recursiveMethod(int n) {
         return (n == 1) ? n : (int) Math.pow(2, n - 1) + recursiveMethod(n - 1);
     }
 
