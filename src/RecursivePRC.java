@@ -1,16 +1,27 @@
-public class TestPrc {
+public class RecursivePRC {
 
     public static void main(String[] args) {
-        TestPrc tp = new TestPrc();
+        RecursivePRC tp = new RecursivePRC();
 
         String str = "Hello";
         int tempInt = 56;
 
-        //System.out.println(tp.getLengthOfString(str));
-        //tp.printString(str);
-        //tp.reversePrintString(str);
-        //tp.printInBinary(tempInt);
-        System.out.println(tp.sum(7,data));
+        System.out.print("문자열 길이의 출력 \"Hello\" : ");
+        System.out.println(tp.getLengthOfString(str));
+
+        System.out.print("\n문자열 프린트 \"Hello\" : ");
+        tp.printString(str);
+        System.out.println("\n");
+
+        System.out.print("문자열 뒤집어서 프린트 \"Hello\" : ");
+        tp.reversePrintString(str);
+        System.out.println("\n");
+
+        System.out.print("2진수로 반환하여 출력 56 : ");
+        tp.printInBinary(tempInt);
+        System.out.println();
+
+        System.out.println("\n배열의 합 구하기 data = {1,2,3,4,5,6,7,8,9};\n: "+tp.sum(7,data));
     }
 
 
