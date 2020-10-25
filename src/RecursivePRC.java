@@ -21,7 +21,7 @@ public class RecursivePRC {
         tp.printInBinary(tempInt);
         System.out.println();
 
-        System.out.println("\n배열의 합 구하기 data = {1,2,3,4,5,6,7,8,9};\n: "+tp.sum(7,data));
+        System.out.println("\n배열의 합 구하기 data = {1,2,3,4,5,6,7,8,9};\n: "+tp.sum(9,data));
     }
 
 
