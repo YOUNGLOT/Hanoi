@@ -44,6 +44,7 @@ public class UseRecursive {
             return recursiveMethod(eraseLogic(ar,arrSize,seq), arrSize, seq - 1);
     }
 
+    //가운데 공간을 비우는 Logic
     private String[][] eraseLogic(String[][] ar, int arrSize, int seq) {
         int temp = (int) Math.pow(3, seq);
 
@@ -62,7 +63,6 @@ public class UseRecursive {
 
             }
         }
-
         return ar;
     }
 
@@ -74,7 +74,5 @@ public class UseRecursive {
             System.out.println();
         }
     }
-
-
 
 }
