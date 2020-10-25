@@ -35,7 +35,7 @@ javac - .java(자바코드 소스파일) -> .class(JVM 바이트코드) 타입�
  1 warning
  C:\Java> javac -deprecation World.java
  World.java:52: Note: The method java.awt.Dimension size() in class java.awt.Compon
- ent has been deprecated.
+ ent has been dejavacprecated.
  Dimension d = size();
 
  Note: World.java uses a deprecated API. Please consult the documentation for a be

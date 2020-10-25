@@ -10,8 +10,8 @@ public class CompareBenefit {
     public static void main(String[] args) {
         int inputNum = 20;
 
-        List MyCode_UsingMemory = new ArrayList<Integer>();
-        List GoogleCode_UsingMemory = new ArrayList<Integer>();
+        List MyCode_UsingMemory = new ArrayList<Long>();
+        List GoogleCode_UsingMemory = new ArrayList<Long>();
         for (int i = 0; i < 1000; i++) {
             GoogleCode_UsingMemory.add(doGoogleCode(inputNum));
             MyCode_UsingMemory.add(doMyCode(inputNum));
