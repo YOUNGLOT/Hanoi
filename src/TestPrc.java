@@ -10,7 +10,7 @@ public class TestPrc {
         //tp.printString(str);
         //tp.reversePrintString(str);
         //tp.printInBinary(tempInt);
-        //System.out.println(tp.sum(7,data));
+        System.out.println(tp.sum(7,data));
     }
 
 
@@ -32,10 +32,6 @@ public class TestPrc {
 
     // 문자열의 프린트
     public void printString(String string) {
-        if (string == null) {
-            return;
-        }
-
         if (string.length() == 0) {
             return;
         } else {
@@ -46,9 +42,9 @@ public class TestPrc {
 
     // 문자열을 뒤집어서 프린트
     public void reversePrintString(String string){
-        if(string == null){return ;}
-        if(string.length()==0){return;}
-        else{
+        if(string.length()==0){
+            return;
+        } else {
             reversePrintString(string.substring(1));
             System.out.print(string.charAt(0));
         }
@@ -56,9 +52,9 @@ public class TestPrc {
 
     //2진수로 변환하여 출력
     public void printInBinary(int n) {
-        if (n<2)
+        if (n<2) {
             System.out.print(n);
-        else {
+        }else {
             printInBinary(n/2); // n을 2로 나눈 몫을 먼저 2진수로 변환하여 출력한 후
             System.out.print(n%2); // n을 2로 나눈 나머지를 인쇄한다.
         }
@@ -68,10 +64,11 @@ public class TestPrc {
     // data[0]에서 data[n-1]까지의 합
     private static int[] data = {1,2,3,4,5,6,7,8,9};
     private int sum(int n, int[] data) {
-        if (n<=0)
+        if (n<=0) {
             return 0;
-        else
-            return sum(n-1, data) + data[n-1];
+        }else {
+            return sum(n - 1, data) + data[n - 1];
+        }
     }
 
 

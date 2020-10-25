@@ -26,7 +26,6 @@ public class CompareBenefit {
     }
 
     private static long doGoogleCode(int input){
-
         long beforeMem = getNowMemory();
 
         GoogleTowerOfHanoi towerOfHanoi = new GoogleTowerOfHanoi();
@@ -47,7 +46,7 @@ public class CompareBenefit {
         return afterMem - beforeMem;
     }
 
-    private static long getNowMemory() {
+    protected static long getNowMemory() {
         return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
     }
 
