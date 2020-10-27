@@ -10,17 +10,20 @@ public class CompareBenefit {
     public static void main(String[] args) {
         int inputNum = 20;
 
-        List MyCode_UsingMemory = new ArrayList<Long>();
-        List GoogleCode_UsingMemory = new ArrayList<Long>();
+        List myCode_UsingMemory = new ArrayList<Long>();
+        List googleCode_UsingMemory = new ArrayList<Long>();
+
         for (int i = 0; i < 1000; i++) {
-            GoogleCode_UsingMemory.add(doGoogleCode(inputNum));
-            MyCode_UsingMemory.add(doMyCode(inputNum));
+            myCode_UsingMemory.add(doMyCode(inputNum));
+            googleCode_UsingMemory.add(doGoogleCode(inputNum));
         }
+
         long MySum = 0;
         long GoogleSum = 0;
+
         for (int i = 0; i < 1000; i++) {
-            MySum += (long) MyCode_UsingMemory.get(i)/1000;
-            GoogleSum += (long) GoogleCode_UsingMemory.get(i)/1000;
+            MySum += (long) myCode_UsingMemory.get(i)/1000;
+            GoogleSum += (long) googleCode_UsingMemory.get(i)/1000;
         }
         System.out.printf("MyCode의 평균 메모리 사용량 : %d byte \nGoogleCode의 평균 메모리 사용량 : %d byte", MySum, GoogleSum);
     }

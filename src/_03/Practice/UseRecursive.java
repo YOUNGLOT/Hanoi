@@ -47,8 +47,9 @@ public class UseRecursive {
     protected String[][] recursiveMethod(String[][] resultArray, int repeatCount) {
         if(repeatCount < 0){
             return resultArray;
-        }else
-            return recursiveMethod(eraseLogic(resultArray,  repeatCount),  repeatCount - 1);
+        }else {
+            return recursiveMethod(eraseLogic(resultArray, repeatCount), repeatCount - 1);
+        }
     }
 
     //가운데 공간을 비우는 Logic

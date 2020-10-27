@@ -6,6 +6,7 @@ public class RecursivePRC {
         String str = "Hello";
         int tempInt = 56;
 
+
         System.out.print("문자열 길이의 출력 \"Hello\" : ");
         System.out.println(tp.getLengthOfString(str));
 
@@ -22,7 +23,11 @@ public class RecursivePRC {
         System.out.println();
 
         System.out.println("\n배열의 합 구하기 data = {1,2,3,4,5,6,7,8,9};\n: "+tp.sum(9,data));
+
+
+        System.out.println(tp.exponentiation(2,5));
     }
+
 
 
 
@@ -40,6 +45,8 @@ public class RecursivePRC {
         else
             return 1 + getLengthOfString(string.substring(1));
     }
+
+
 
     // 문자열의 프린트
     public void printString(String string) {
@@ -81,6 +88,16 @@ public class RecursivePRC {
             return sum(n - 1, data) + data[n - 1];
         }
     }
+
+    //input의 거듭제곱 indices = 지수
+    private int exponentiation(int input, int indices){
+        if(indices <= 1){
+            return input;
+        }else{
+            return input * exponentiation(input, indices-1);
+        }
+    }
+
 
 
 }
